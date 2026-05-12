@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Hover Menu Test</title>
+
+<style>
+body {
+  margin: 0;
+  background: #f3f3f3;
+  font-family: "Segoe UI", Meiryo, sans-serif;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  padding: 16px 24px;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-title {
+  padding: 10px 16px;
+  background: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  min-width: 240px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 8px 0;
+  z-index: 9999;
+}
+
+.menu:hover .submenu {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background: #e6f2ff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+
+  <div class="menu">
+    <div class="menu-title">お気に入り</div>
+    <div class="submenu">
+      <a href="https://www.office.com" target="_blank">Microsoft 365</a>
+      <a href="https://onedrive.live.com" target="_blank">OneDrive</a>
+      <a href="#">動画マニュアル</a>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="menu-title">検索</div>
+    <div class="submenu">
+      <a href="#">書類検索</a>
+      <a href="#">図面検索</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
