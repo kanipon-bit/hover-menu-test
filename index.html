@@ -2,44 +2,50 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>Hover Menu Test</title>
+<title>Hover Menu</title>
 
 <style>
-body {
+/* ===== リセット ===== */
+html, body {
   margin: 0;
-  background: #f3f3f3;
+  padding: 0;
+  background: transparent;
   font-family: "Segoe UI", Meiryo, sans-serif;
 }
 
+/* ===== ナビ全体 ===== */
 .nav {
   display: flex;
-  gap: 20px;
-  padding: 16px 24px;
+  gap: 12px;
+  padding: 8px 12px;
 }
 
+/* ===== 親メニュー ===== */
 .menu {
   position: relative;
 }
 
 .menu-title {
-  padding: 10px 16px;
+  padding: 8px 14px;
   background: #ffffff;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
+  white-space: nowrap;
   box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
+/* ===== サブメニュー ===== */
 .submenu {
   display: none;
   position: absolute;
-  top: 44px;
+  top: 38px;
   left: 0;
-  min-width: 240px;
+  min-width: 260px;
   background: #ffffff;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  padding: 8px 0;
+  padding: 6px 0;
   z-index: 9999;
 }
 
@@ -47,11 +53,13 @@ body {
   display: block;
 }
 
+/* ===== リンク ===== */
 .submenu a {
   display: block;
-  padding: 10px 16px;
+  padding: 8px 14px;
   color: #333;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .submenu a:hover {
@@ -64,20 +72,54 @@ body {
 
 <div class="nav">
 
+  <!-- お気に入り -->
   <div class="menu">
     <div class="menu-title">お気に入り</div>
     <div class="submenu">
-      <a href="https://www.office.com" target="_blank">Microsoft 365</a>
-      <a href="https://onedrive.live.com" target="_blank">OneDrive</a>
-      <a href="#">動画マニュアル</a>
+      https://www.office.comMicrosoft 365</a>
+      https://onedrive.live.comOneDrive</a>
+      DougaManunal_index.html">動画マニュアル</a>
     </div>
   </div>
 
+  <!-- よく使うリンク -->
+  <div class="menu">
+    <div class="menu-title">よく使うリンク</div>
+    <div class="submenu">
+      #出勤システム（X'sion）</a>
+      #PXまいポータル</a>
+    </div>
+  </div>
+
+  <!-- 検索 -->
   <div class="menu">
     <div class="menu-title">検索</div>
     <div class="submenu">
-      <a href="#">書類検索</a>
-      <a href="#">図面検索</a>
+      #書類検索（PowerApps）</a>
+      launcher.html">図面検索</a>
+    </div>
+  </div>
+
+  <!-- 情報共有 -->
+  <div class="menu">
+    <div class="menu-title">情報共有</div>
+    <div class="submenu">
+      #Q&A・相談</a>
+      #教育制度</a>
+      #用語集</a>
+      #過去トラ・失敗事例</a>
+      #安全関連</a>
+    </div>
+  </div>
+
+  <!-- 各拠点リンク -->
+  <div class="menu">
+    <div class="menu-title">各拠点リンク</div>
+    <div class="submenu">
+      #本社工場</a>
+      #滋賀第一工場</a>
+      #滋賀第二工場</a>
+      #九州エノキ</a>
     </div>
   </div>
 
